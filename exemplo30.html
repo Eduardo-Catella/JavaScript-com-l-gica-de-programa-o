@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>Tabuada</h1>
+
+Digite um numero <br><br>
+<input type="number" id="camponumero">
+
+<button onclick="calcular()">
+
+
+    Mostrar Tabuada
+
+</button>
+
+<p id='mostratabuada'> Sua tabuada sera mostrada aqui.</p>
+
+<body>
+
+</body>
+
+<script>
+
+    function calcular() {
+
+        var numero = parseInt(camponumero.value)
+        if (isNaN(numero)){
+
+alert('por favor, digite um numero')
+
+        }
+
+        else{
+        console.log(numero)
+        var multiplicador = 1
+        var resultado = (numero * multiplicador)
+        mostratabuada.innerHTML = (` ${numero} x ${multiplicador} = ${resultado}`)
+        
+        while (multiplicador < 10) {
+            multiplicador++
+            resultado = numero * multiplicador
+            mostratabuada.innerHTML += (`<br> ${numero} x ${multiplicador} = ${resultado}`)
+            
+        } }
+        camponumero.focus()
+        camponumero.value=''
+    }
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>
+
+    Buscar endereço
+
+</h1>
+
+<body>
+
+</body>
+
+
+CEP:<br><br>
+<input type="text" id="campoCEP" placeholder="99999-999"><button onclick="buscar()"> Buscar</button><br><br>
+Endereço <br><br>
+<input type="text" id="campoendereço" disabled><br><br>
+Numero<br><br>
+<input type="number" id="campoNumero"><br><br>
+Bairro<br><br>
+<input type="text" id="campobairro" disabled><br><br>
+Cidade<br><br>
+<input type="text" id="campocidade" disabled><br><br>
+Estado<br><br>
+<input type="text" id="campoestado" disabled>
+
+<script src="js/buscaCep.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js"></script>
+
+<script>
+
+    function buscar() {
+
+        var cep = campoCEP.value.replace('-', '')
+        VMasker(campoCEP).maskPattern('99999-999')
+        var dados = buscaCep(cep)
+        console.log(dados)
+
+        if (dados.length > 0 && dados[0] != undefined) {
+            campoendereço.value = dados[0]
+            campobairro.value = dados[1]
+            campocidade.value = dados[2]
+            campoestado.value = dados[3]
+
+        }
+    }
+
+
+
+</script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>Lista de Supermercado</h1>
+
+<body>
+
+</body>
+
+<p>Use o formulario abaixo para criar sua lista de supermercado:</p>
+
+Nome do item: <br>
+<input type='text' id='campoItem'>
+
+<button onclick="adicionar()"> Adicionar </button>
+
+<p id="exibelista">Sua lista esta vazia</p>
+
+<script>
+
+    var lista = []
+
+    function adicionar() {
+
+        var item = campoItem.value
+
+        if (item.trim() == '') {
+
+            alert('Por favor preencha os campos!')
+        }
+        else {
+            lista.push(item)
+            exibelista.innerHTML = `
+
+                Sua lista de supermercado tem <b>: ${lista.length} itens </b>. Eles são: <br>
+
+                <ul>
+                <li> ${lista.join('</li><li>')}
+
+                    </li>
+                    </ol>
+
+
+
+                `
+        }
+        campoItem.value = ''
+        campoItem.focus()
+    }
+
+    document.onkeyup = event => {
+
+        if (event.key === 'Enter') {
+
+            adicionar()
+
+
+        }
+
+
+
+    }
+
+</script>
+
+</html>

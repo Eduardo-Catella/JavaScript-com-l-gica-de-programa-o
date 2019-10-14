@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1> Exercicio estoque</h1>
+<body>
+    
+</body>
+
+Qual a quantidade atual em estoque?<br><br>
+<input type="text" id="quantidadeatual">
+<br><br>
+Qual a quantidade maxima em estoque?<br><br>
+<input type="text" id="quantidademaxima">
+<br><br>
+Qual a quantidade minima em estoque?<br><br>
+<input type="text"id= 'quantidademinima'>
+<br><br>
+
+<button onclick="calcular()"> Calcular </button>
+
+<script>
+
+function calcular(){
+
+var valoratual = parseInt(quantidadeatual.value)
+var valormaximo = parseInt(quantidademaxima.value)
+var valorminimo = parseInt(quantidademinima.value)
+var quantidademedia = (valormaximo+valorminimo)/2
+
+if(valoratual >= quantidademedia){
+
+document.write(`
+
+Quantidade média é R$ ${quantidademedia.toFixed(2).replace(',','.')} <br>
+
+Não Efetuar compra!`)
+
+
+}
+
+else {
+
+
+    document.write('Efetuar compra!')
+}
+
+}
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>calcula saldo</h1>
+
+
+<body>
+
+</body>
+
+<script src="js/peganumero.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js"></script>
+<script src="js/formataMoeda.js"></script>
+<script>
+
+    var saldo = peganumero('Qual seu saldo atual?')
+    var débito = peganumero('Qual o valor do debito?')
+    var credito = peganumero('Qual o valor do crédito?')
+    var saldoatual = saldo - débito + credito
+document.write (`Seu saldo atual é: ${formataMoeda(saldoatual)} `)
+
+
+
+    if(saldoatual >= 0) {
+
+        document.write('Saldo Positivo')
+
+
+
+    }
+
+else {  
+
+        document.write('Saldo Negativo')
+
+
+    }
+
+
+
+</script>
+
+</html>

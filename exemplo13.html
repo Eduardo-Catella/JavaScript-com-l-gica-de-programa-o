@@ -1,0 +1,15 @@
+<script>
+var custo_de_fabrica = parseFloat(prompt('Digite o valor do custo de fabrica do carro').replace(',','.'))
+var custo_distribuidor = custo_de_fabrica*0.28
+var custo_impostos = custo_de_fabrica*0.45
+var custo_final = custo_de_fabrica+custo_distribuidor+custo_impostos
+
+document.write (`
+
+O custo final do carro é: R$ ${custo_final.toFixed(2).replace('.',',')}
+
+
+
+`)
+
+</script>

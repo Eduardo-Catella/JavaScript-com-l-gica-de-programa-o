@@ -1,0 +1,16 @@
+<script>
+var nome = prompt ('Digite seu nome')
+var nota1 = parseFloat( prompt ('Digite a nota da sua primeira prova').replace (',','.'))
+var nota2 = parseFloat (prompt ('Digite a nota da sua segunda prova').replace (',','.'))
+var nota3 = parseFloat (prompt ('Digite sua terceira nota').replace (',','.'))
+
+var resultado = ((nota1+nota2+nota3)/3)
+
+document.write(`
+
+A média final deste aluno é: ${resultado.toFixed(1)}
+
+
+
+`)
+</script>

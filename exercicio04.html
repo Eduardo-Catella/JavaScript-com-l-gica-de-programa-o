@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculo de areas</title>
+</head>
+<body>
+    
+</body>
+<h1>Calcular area do retangulo e triangulo</h1>
+<button onclick="triangulo()"> Calcular area do triangulo</button>
+<button onclick="retangulo()">Calcular area do retangulo</button>
+<script>
+
+function triangulo(){
+var basedotriangulo = parseFloat(prompt('digite a base do triangulo'))
+var alturadotriangulo = parseFloat(prompt('digite a altura do triangulo'))
+
+if (basedotriangulo===''  || alturadotriangulo === ''){
+
+alert("digite um valor, você não esta digitando nada!!!")
+
+}
+
+else {
+ document.write(` 
+ 
+ A área do triangulo é: ${basedotriangulo*alturadotriangulo}
+ 
+ 
+ 
+ `)
+}
+}
+
+function retangulo() {
+
+var basedoretangulo = parseFloat(prompt('digite a base do RETANGULO'))
+var alturadoretangulo = parseFloat(prompt('digite a altura do retangulo'))
+
+document.write(`
+
+A área do retangulo é: ${(basedoretangulo*alturadoretangulo)/2}
+
+`)
+}
+</script>
+</html>

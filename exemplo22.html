@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1> compra de frutas</h1>
+
+<body>
+
+
+</body>
+
+Digite abaixo a quantidade de maçãs<br><br>
+<input type="text" id="quantidade"><br><br>
+<button onclick="maca()">
+
+    Finalizar compra
+
+
+
+</button>
+
+<script src="js/peganumero.js">
+
+
+</script>
+<script>
+
+    function maca() {
+
+        var totaldemacas = quantidade.value
+
+        if (totaldemacas < 12) {
+
+            var totaldacompra = 1.3 * totaldemacas
+
+            document.write(`
+    
+    O total da compra é R$: ${totaldacompra}
+    
+    
+    `)
+
+
+        }
+
+        else {
+var totaldacompra = totaldemacas*1
+
+document.write (totaldacompra)
+
+            
+        }
+    }
+
+
+
+</script>
+
+</html>

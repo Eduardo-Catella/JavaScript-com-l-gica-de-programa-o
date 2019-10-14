@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1>Calcular salario total</h1>
+
+<body>
+    
+</body>
+<script>
+
+var salariovenda = parseFloat(prompt('qual seu salario?'))
+var totalvendas = parseFloat(prompt("Qual o total de vendas?"))
+var comissao1 = totalvendas*0.3
+var comissao2 = totalvendas*0.5
+var salariototal = comissao1+comissao2+salariovenda
+
+if (totalvendas<= 1500) {
+
+document.write(`O salario total é: ${comissao1+salariovenda}
+
+
+`)
+
+
+
+}
+
+else {
+
+document.write(`
+
+O salario total é: ${salariototal}
+`)
+
+}
+
+    
+</script>
+</html>

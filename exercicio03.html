@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1>Lista de Supermercado</h1>
+
+Adicione um item em sua lista com o campo abaixo: <br>
+<input type="text" id="campoitem">
+<br>
+<button onclick="adicionar()">
+    
+    Adicionar</button>
+    <p id="exibelista">Sua lista esta vazia</p>
+<body>
+    
+</body>
+
+<script>
+var lista = []
+function adicionar(){
+var item = campoitem.value
+
+if (item.trim() ===''){
+
+alert('preencha os campos')
+
+    
+}
+else {
+
+lista.push(item)
+
+exibelista.innerHTML = `
+
+Sua lista de supermercados tem: <br> ${lista.length} e os itens são :
+
+
+<ul> <li>${lista.join('</li><li>')} </li> </ul>
+
+
+
+`
+campoitem.value=''
+campoitem.focus()
+}
+
+
+}
+
+
+
+
+</script>
+</html>

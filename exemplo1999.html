@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1>Cadastro Academia</h1>
+
+<p> Preencha o Forumulario para finalizar o cadastro</p>
+    
+    Nome: <br>
+    <input type="text" id='camponome'>
+    <br><br>
+
+    Altura: <br><br>
+    <input type="text" id='campoaltura'> <br><br>
+    Peso: <br><br> 
+    <input type="text" id='campopeso'>
+    <br><br>
+    Data de nascimento: <br><br>
+    <input type="text" id='campodata'>
+<br><br>
+<input type="checkbox" id='camposoucardiaco'> Tenho problemas cardiacos <br><br>
+    <button onclick ="cadastrar()" id= 'botao'>Finalizar</button>
+
+
+
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js"> </script>
+    
+</body>
+
+<script src="js/libIdade.js"></script>
+
+<script>
+
+    VMasker(campodata).maskPattern('99/99/9999')
+    VMasker(campoaltura).maskPattern('9,99')
+
+function cadastrar (){
+
+var nome = camponome.value
+var altura = campoaltura.value
+var peso = campopeso.value
+var nascimento=campodata.value
+var soucardiaco = camposoucardiaco.checked
+console.log(nascimento)
+var datapedacos = nascimento.split('/')
+console.log(datapedacos)
+var idade = calculaIdade(datapedacos[0], datapedacos[1], datapedacos [2])
+var frase
+
+if (soucardiaco==true){
+
+frase='PRECISA DE ACOMPANHAMENTO MÉDICO'
+
+
+}
+
+else {
+
+
+frase='NÃO PRECISA DE MÉDICO'
+
+
+}
+
+
+
+
+
+document.write (`
+
+Seus Dados cadastrais são: <br> <br>
+
+Nome: ${nome} <br>
+Altura: ${altura}<br>
+Peso: ${peso} <br>
+Data de nascimento: ${nascimento} <BR>
+Idade: ${idade} anos
+${frase}
+`)
+
+
+}
+
+
+
+
+</script>
+</html>

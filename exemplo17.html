@@ -1,0 +1,22 @@
+<h1> Função com retorno</h1>
+
+<script>
+
+function converteremmoeda(valor) {
+
+var moeda = parseFloat(valor).toFixed(2).replace('.',',') 
+return `R${moeda}`
+}
+
+parseInt(17.555)
+
+
+var moedaconvertida = converteremmoeda(17.5389)
+
+document.write(`
+${moedaconvertida}
+
+
+`)
+
+</script>

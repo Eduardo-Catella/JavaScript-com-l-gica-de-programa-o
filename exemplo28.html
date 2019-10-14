@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1>Jogo de adivinhação</h1>
+
+<button onclick="jogar()"> 
+    
+    Jogar 
+
+</button>
+
+<script src="js/pegaNumeroAleatorio.js"></script>
+<script src="js/peganumero.js"></script>
+<script src="js/mostra.js"></script>
+
+<body>
+    
+</body>
+
+<script>
+
+function jogar () {
+
+var numerosorteado = pegaNumeroAleatorio(0,10)
+var chute = peganumeroInteiro('Chute um numero:')
+
+while (chute>10 || chute<0) {
+
+
+chute=peganumeroInteiro ('informe um chute entre 0 e 10')
+
+}
+
+if (chute === numerosorteado ) {
+
+mostra (` Parabéns, você acertou! O numero sorteado foi ${numerosorteado}
+
+
+
+`)
+
+
+}
+
+else { 
+
+
+mostra('Que pensa, você errou! O numero sorteado foi'+ numerosorteado)
+
+
+}
+
+
+
+
+
+
+
+
+
+}
+</script>
+</html>

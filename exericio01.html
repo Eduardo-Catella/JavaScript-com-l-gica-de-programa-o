@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Informar nome</title>
+</head>
+
+<h1>Informar nome completo</h1>
+Nome:<br>
+<input type="text" id="primeironome"><br>
+Sobrenome:<br>
+<input type="text" id="sobrenome"><br>
+
+<button onclick="nomecompleto()">
+    
+    Mostrar meu nome </button>
+    
+<body>
+    
+</body>
+<script>
+
+function nomecompleto() {
+
+var nome = primeironome.value
+var sobrename = sobrenome.value
+
+document.write(`
+
+Seu nome completo é :${nome} ${sobrename}
+
+`)
+
+}
+
+
+
+
+</script>
+
+</html>

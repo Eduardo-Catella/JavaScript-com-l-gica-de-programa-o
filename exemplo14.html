@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>
+
+    Carro vs Uber
+
+</h1>
+
+<script src="js/formataMoeda.js"></script>
+<script src="js/peganumero.js"></script>
+<script src="js/formataTempo.js"></script>
+
+<body>
+    
+</body>
+
+<Script>
+
+var distancia = peganumero('Digite a distancia em KM')
+console.log(distancia)
+var autonomia = peganumero('Digite quantos KM o carro percorre por Litro')
+var preço_gasolina = peganumero('Qual o preço do litro da gasolina')
+var preço_estacionamento = peganumero('Qual o preço do estacionamento')
+var gasto_gasolina = (distancia/autonomia)*preço_gasolina
+var custo_total = (gasto_gasolina+preço_estacionamento)
+
+document.write(`
+
+O preço da gasolina é: R$${formataMoeda(preço_gasolina)}. <br>
+O gasto com gasolina será de: R$${formataMoeda(gasto_gasolina)}<br>
+O preço do estacionamento é: R$ ${preço_estacionamento.toFixed(2).replace('.',',')}<br>
+O gasto total da viagem é de: R$${custo_total.toFixed(2).replace('.',',')}
+
+`)
+
+</Script>
+
+<h2>Uber</h2>
+
+<script>
+var velocidadeMedia = 25
+var custoKmRodado = distancia*1.40
+var tempoemHoras = distancia/velocidadeMedia
+var tempoemMinutos = tempoemHoras*60
+var custotempo = tempoemMinutos*0.26
+var totaluber = 2.75+custoKmRodado+custotempo
+
+
+document.write(`
+
+Total uber: R$${formataMoeda(totaluber)}
+tempo da viagem: ${formataTempo(tempoemMinutos)}
+
+`)
+
+
+
+
+
+</script>
+</html>

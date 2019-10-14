@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Acumulador de valores</h1>
+    
+</body>
+
+<script>
+    var acumulador = 0
+
+var valorinicial = confirm('deseja adicionar um valor inicial?')
+
+if (valorinicial==true) {
+
+    var valor= parseFloat(prompt('digite um valor'))
+    acumulador+=valor
+
+
+
+}
+
+while (confirm('Deseja adicionar outro valor?')===true) {
+
+valor = parseInt(prompt('digite outro valor').replace(',','.'))
+acumulador+=valor
+
+}
+
+document.write('O valor acumulado é ' + acumulador)
+
+</script>
+</html>

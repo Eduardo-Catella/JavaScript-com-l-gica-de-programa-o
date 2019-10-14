@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1>Login de usuario</h1>
+
+<body>
+
+</body>
+
+Usuario <br><br>
+<input type="text" id="campousuario"> <br><br>
+<input type="password" id="camposenha"> <br><br>
+<button onclick='login()'>
+
+
+    Fazer login
+
+</button>
+
+<script>
+
+    function login() {
+
+        var usuario = campousuario.value
+        var senha = camposenha.value
+
+        if (usuario == 'caelum' && senha == 'wd01') {
+
+            document.write("Login realizado com sucesso!")
+            window.location = 'https://google.com'
+        }
+        else {
+
+            alert('Dados invalidos, tente novamente.')
+            campousuario.value = ''
+            camposenha.value = ''
+            campousuario.focus()
+
+
+
+
+        }
+    }
+
+
+
+
+
+</script>
+
+</html>
